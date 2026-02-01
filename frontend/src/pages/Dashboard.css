@@ -1,0 +1,146 @@
+/* ===== FULL PAGE BACKGROUND (same as auth pages) ===== */
+.dashboard-wrapper {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 32px 16px;
+    overflow-y: auto;
+    font-family: "Inter", system-ui, sans-serif;
+  }
+  
+  /* ===== MAIN CONTAINER ===== */
+  .dashboard-card {
+    width: 100%;
+    max-width: 1100px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 28px;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* ===== TITLE ===== */
+  .dashboard-title {
+    font-size: 1.8rem;
+    color: #f8fafc;
+    margin-bottom: 24px;
+  }
+  
+  /* ===== SUMMARY ===== */
+  .summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .summary-card {
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  
+  .summary-card:hover,
+  .summary-card.active {
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+  }
+  
+  .summary-card span {
+    color: #94a3b8;
+    font-size: 0.8rem;
+  }
+  
+  .summary-card strong {
+    font-size: 1.6rem;
+    color: #f8fafc;
+  }
+  
+  /* ===== ACTION BAR ===== */
+  .dashboard-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  /* ===== BUTTONS ===== */
+  .btn {
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+  }
+  
+  .btn.primary {
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    color: #020617;
+    font-weight: 600;
+  }
+  
+  .btn.ghost {
+    background: transparent;
+    border: 1px solid #1e293b;
+    color: #cbd5f5;
+  }
+  
+  .btn.danger {
+    background: #450a0a;
+    color: #fecaca;
+  }
+  
+  /* ===== FORM ===== */
+  .create-form {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  
+  .create-form input,
+  .create-form select,
+  .create-form textarea {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 10px;
+    color: #f8fafc;
+  }
+  
+  /* ===== JOB LIST ===== */
+  .jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .job-card {
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 16px;
+  }
+  
+  /* ===== ACTIONS ===== */
+  .actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  /* ===== INFO ===== */
+  .info {
+    color: #94a3b8;
+    text-align: center;
+    margin: 16px 0;
+  }
+  
+  /* ===== MOBILE ===== */
+  @media (max-width: 640px) {
+    .dashboard-card {
+      padding: 20px;
+    }
+  }
+  

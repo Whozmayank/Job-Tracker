@@ -1,0 +1,128 @@
+/* Page background */
+.register-wrapper {
+    position: fixed;              /* 🔥 breaks out of parent layout */
+    inset: 0;                     /* top:0 right:0 bottom:0 left:0 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #1e293b, #020617);
+    z-index: 10;
+  }  
+  
+  /* Card */
+  .register-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 14px;
+    padding: 32px;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.65);
+  }
+  
+  /* Headings */
+  .register-title {
+    color: #f8fafc;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    text-align: center;
+  }
+  
+  .register-subtitle {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    margin-bottom: 24px;
+    text-align: center;
+  }
+  
+  /* Form */
+  .form-group {
+    margin-bottom: 16px;
+  }
+  
+  .form-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.85rem;
+    color: #cbd5f5;
+  }
+  
+  /* Inputs */
+  .form-input {
+    width: 100%;
+    padding: 11px 12px;
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  
+  .form-input::placeholder {
+    color: #64748b;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    border-color: #38bdf8;
+    box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.25);
+  }
+  
+  /* Button */
+  .register-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: linear-gradient(135deg, #38bdf8, #6366f1);
+    border: none;
+    border-radius: 8px;
+    color: #020617;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .register-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.35);
+  }
+  
+  .register-btn:active {
+    transform: translateY(0);
+    box-shadow: none;
+  }
+  
+  /* Footer */
+  .register-footer {
+    margin-top: 18px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    text-align: center;
+  }
+  
+  /* Link */
+  .login-link {
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .login-link:hover {
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 480px) {
+    .register-card {
+      padding: 24px 20px;
+      border-radius: 12px;
+    }
+  
+    .register-title {
+      font-size: 1.4rem;
+    }
+  }
+  
