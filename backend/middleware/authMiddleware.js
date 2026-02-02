@@ -15,7 +15,13 @@ const protect = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const secret = process.env.JWT_SECRET;
+    
+    if (!secret) {
+      return res.status(500).json({ error: "Server configuration error" });
+    }
+    
+    const decoded = jwt.verify(token, secret);
     req.user = { id: decoded.id };
     next();
   } catch (error) {
