@@ -13,10 +13,11 @@ export const registerUser = async (userData) => {
     },
     body: JSON.stringify(userData),
   });
+  const data = await response.json().catch(() => null);
   if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(data?.error || `HTTP error! status: ${response.status}`);
   }
-  return response.json();
+  return data;
 };
 
 export const loginUser = async (userData) => {
@@ -27,8 +28,9 @@ export const loginUser = async (userData) => {
     },
     body: JSON.stringify(userData),
   });
+  const data = await response.json().catch(() => null);
   if (!response.ok) {
-    throw new Error(`HTTP error! status: ${response.status}`);
+    throw new Error(data?.error || `HTTP error! status: ${response.status}`);
   }
-  return response.json();
+  return data;
 };
